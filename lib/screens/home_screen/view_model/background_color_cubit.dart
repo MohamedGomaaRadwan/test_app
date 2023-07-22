@@ -63,6 +63,5 @@ class BackgroundColorState with _$BackgroundColorState {
   factory BackgroundColorState({
     @Default(Colors.lightBlue) Color topColor,
     @Default(Colors.blue) Color bottomColor,
-    String? errorMessage,
   }) = _BackgroundColorState;
 }

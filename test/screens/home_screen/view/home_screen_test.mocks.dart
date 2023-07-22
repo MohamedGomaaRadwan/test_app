@@ -93,16 +93,16 @@ class MockBackgroundColorCubit extends _i1.Mock
         ),
       ) as _i3.Color);
   @override
-  _i3.Color generateMatchingColor(_i3.Color? color) => (super.noSuchMethod(
+  _i3.Color generateMatchingColor(_i3.Color? baseColor) => (super.noSuchMethod(
         Invocation.method(
           #generateMatchingColor,
-          [color],
+          [baseColor],
         ),
         returnValue: _FakeColor_1(
           this,
           Invocation.method(
             #generateMatchingColor,
-            [color],
+            [baseColor],
           ),
         ),
       ) as _i3.Color);

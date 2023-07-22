@@ -18,7 +18,6 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$BackgroundColorState {
   Color get topColor => throw _privateConstructorUsedError;
   Color get bottomColor => throw _privateConstructorUsedError;
-  String? get errorMessage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $BackgroundColorStateCopyWith<BackgroundColorState> get copyWith =>
@@ -31,7 +30,7 @@ abstract class $BackgroundColorStateCopyWith<$Res> {
           $Res Function(BackgroundColorState) then) =
       _$BackgroundColorStateCopyWithImpl<$Res, BackgroundColorState>;
   @useResult
-  $Res call({Color topColor, Color bottomColor, String? errorMessage});
+  $Res call({Color topColor, Color bottomColor});
 }
 
 /// @nodoc
@@ -50,7 +49,6 @@ class _$BackgroundColorStateCopyWithImpl<$Res,
   $Res call({
     Object? topColor = null,
     Object? bottomColor = null,
-    Object? errorMessage = freezed,
   }) {
     return _then(_value.copyWith(
       topColor: null == topColor
@@ -61,10 +59,6 @@ class _$BackgroundColorStateCopyWithImpl<$Res,
           ? _value.bottomColor
           : bottomColor // ignore: cast_nullable_to_non_nullable
               as Color,
-      errorMessage: freezed == errorMessage
-          ? _value.errorMessage
-          : errorMessage // ignore: cast_nullable_to_non_nullable
-              as String?,
     ) as $Val);
   }
 }
@@ -77,7 +71,7 @@ abstract class _$$_BackgroundColorStateCopyWith<$Res>
       __$$_BackgroundColorStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Color topColor, Color bottomColor, String? errorMessage});
+  $Res call({Color topColor, Color bottomColor});
 }
 
 /// @nodoc
@@ -93,7 +87,6 @@ class __$$_BackgroundColorStateCopyWithImpl<$Res>
   $Res call({
     Object? topColor = null,
     Object? bottomColor = null,
-    Object? errorMessage = freezed,
   }) {
     return _then(_$_BackgroundColorState(
       topColor: null == topColor
@@ -104,10 +97,6 @@ class __$$_BackgroundColorStateCopyWithImpl<$Res>
           ? _value.bottomColor
           : bottomColor // ignore: cast_nullable_to_non_nullable
               as Color,
-      errorMessage: freezed == errorMessage
-          ? _value.errorMessage
-          : errorMessage // ignore: cast_nullable_to_non_nullable
-              as String?,
     ));
   }
 }
@@ -116,9 +105,7 @@ class __$$_BackgroundColorStateCopyWithImpl<$Res>
 
 class _$_BackgroundColorState implements _BackgroundColorState {
   _$_BackgroundColorState(
-      {this.topColor = Colors.lightBlue,
-      this.bottomColor = Colors.blue,
-      this.errorMessage});
+      {this.topColor = Colors.lightBlue, this.bottomColor = Colors.blue});
 
   @override
   @JsonKey()
@@ -126,12 +113,10 @@ class _$_BackgroundColorState implements _BackgroundColorState {
   @override
   @JsonKey()
   final Color bottomColor;
-  @override
-  final String? errorMessage;
 
   @override
   String toString() {
-    return 'BackgroundColorState(topColor: $topColor, bottomColor: $bottomColor, errorMessage: $errorMessage)';
+    return 'BackgroundColorState(topColor: $topColor, bottomColor: $bottomColor)';
   }
 
   @override
@@ -142,14 +127,11 @@ class _$_BackgroundColorState implements _BackgroundColorState {
             (identical(other.topColor, topColor) ||
                 other.topColor == topColor) &&
             (identical(other.bottomColor, bottomColor) ||
-                other.bottomColor == bottomColor) &&
-            (identical(other.errorMessage, errorMessage) ||
-                other.errorMessage == errorMessage));
+                other.bottomColor == bottomColor));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, topColor, bottomColor, errorMessage);
+  int get hashCode => Object.hash(runtimeType, topColor, bottomColor);
 
   @JsonKey(ignore: true)
   @override
@@ -162,15 +144,12 @@ class _$_BackgroundColorState implements _BackgroundColorState {
 abstract class _BackgroundColorState implements BackgroundColorState {
   factory _BackgroundColorState(
       {final Color topColor,
-      final Color bottomColor,
-      final String? errorMessage}) = _$_BackgroundColorState;
+      final Color bottomColor}) = _$_BackgroundColorState;
 
   @override
   Color get topColor;
   @override
   Color get bottomColor;
-  @override
-  String? get errorMessage;
   @override
   @JsonKey(ignore: true)
   _$$_BackgroundColorStateCopyWith<_$_BackgroundColorState> get copyWith =>
